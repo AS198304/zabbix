@@ -6,10 +6,10 @@ ARCH=$(uname -m)
 OS_VERSION=$(lsb_release -cs)
 
 if [[ "$ARCH" == "x86_64" ]]; then
-    if [[ "$OS_VERSION" == "bullseye" ]]; then
+    if [[ "$OS_VERSION" == "bookworm" ]]; then
         wget https://repo.zabbix.com/zabbix/6.5/debian/pool/main/z/zabbix-release/zabbix-release_6.5-1+debian12_all.deb
         dpkg -i zabbix-release_6.5-1+debian12_all.deb
-    elif [[ "$OS_VERSION" == "buster" ]]; then
+    elif [[ "$OS_VERSION" == "bullseye" ]]; then
         wget https://repo.zabbix.com/zabbix/6.5/debian/pool/main/z/zabbix-release/zabbix-release_6.5-1+debian11_all.deb
         dpkg -i zabbix-release_6.5-1+debian11_all.deb
     else
